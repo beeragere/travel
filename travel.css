@@ -25,6 +25,7 @@
 
 :root{
 	--subColor: rgb(199, 155, 12);
+	--subColorOpaque: rgb(199, 155, 12, 0.3); 
 	font-size: 20px;
 }
 
@@ -53,11 +54,11 @@ body{
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+	column-gap: 1rem;
 }
 .mountainImage header::after{
 	content: "";
 	position: absolute;
-
 	height: 2px;
 	background-color: white;
 
@@ -66,6 +67,7 @@ body{
 	bottom: 0;
 }
 header h3{
+	min-width: 7rem;
 	position: relative;
 	background-color: var(--subColor);
 	padding: 2px;
@@ -84,64 +86,93 @@ header h3::after{
 	display: flex;
 	justify-content: space-around;
 	column-gap: 0.5rem;
-
 }
 
 menu div{
+	position: relative;
 	cursor: pointer;
+}
+.menuItems::after{
+	content: "";
+	position: absolute;
+
+	background-color: white;
+	height: 1px;
+	width: 100%;
+
+	left: 0;
+	bottom: 0;
+
+	transition: 100ms;
+}
+.menuItems:hover::after{
+	height: 3px;
 }
 
 /* info */
 .info{
-	position: relative;
 	margin-top: 5rem;
 
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-
-	z-index: 2;
+	display: grid;
+	place-items: center;
 }
 
-.infoCover{
-	box-sizing: content-box;
-	position: relative;
-	left: 1rem;
-	background-color: transparent;
-	width: 10rem;
-	height: 20rem;
-
-	border: 8px solid var(--subColor);
-	border-right: none;
-	z-index: -2;
-}
 
 .infoInside{
-	max-width: 17rem;
-	left: 2rem;
-	position: absolute;
+	position: relative;
+	width: 16rem;
 	user-select: none;
+}
+.infoInside::after{
+	box-sizing: content-box;
+	content: "";
+	position: absolute;
+	left: -20px;
+	bottom: -20px;
+
+	background-color: transparent;
+
+	border: 10px solid var(--subColor);
+	border-top: none;
+	border-right: none;
+
+	height: 80%;
+	width: 50%;
 }
 .infoInside>p{
 	padding-top: 12px;
 	padding-bottom: 12px;
 	line-height: 30px;
 }
+.infoInside p:nth-child(1){
+	background-color: var(--subColorOpaque);
+	line-height: 0px;
+	padding-left: 5px;
+	width: 14rem;
+	height: 1.4rem;
+}
 
 .learnMore{
-	display: relative;
+	position: relative;
+	width: max-content;
 	font-weight: bold;
 	cursor: pointer;
+	z-index: 2;
+}
+.learnMore:hover::after{
+	height: 3px;
 }
 .learnMore::after{
 	content: "";
 	position: absolute;
 	left: 0;
+	right: 0;
 	bottom: 0;
 
 	background-color: white;
 	height: 1px;
-	width: 6rem;
+
+	transition: all 100ms;
 }
 
 
@@ -159,7 +190,7 @@ menu div{
 */
 .riverImage{
 	height: 45rem;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.9) 1%, rgba(0, 0, 0, 0)), url("./images/image8.jpg");
+	background-image: linear-gradient(rgba(0, 0, 0, 0.9) 1%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./images/image8.jpg");
 	background-position: 100% 100%;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -181,29 +212,34 @@ menu div{
 	background-size: cover;
 
 	border-radius: 5px;
-	border: 1px solid white;
+	border: 1px solid var(--subColor);
 
 }
-
 .riverImage .info1{
-	height: max-content;
-	width: 16rem;
-}
-.infoCover1{
-	padding: 0.2rem;
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-	border: 10px solid var(--subColor);
-	border-top: none;
-	border-left: none;
-
 	height: max-content;
 	width: 16rem;
 }
 
 .infoInside1{
+	position: relative;
 	max-height: 30rem;
 	max-width: 20rem;
+}
+.infoInside1::after{
+	box-sizing: content-box;
+	content: "";
+	position: absolute;
+	right: -15px;
+	bottom: -20px;
+
+	background-color: transparent;
+
+	border: 10px solid var(--subColor);
+	border-top: none;
+	border-left: none;
+
+	height: 80%;
+	width: 105%;
 }
 .infoInside1 p{
 	margin-top: 1rem;
@@ -216,8 +252,9 @@ menu div{
 	position: relative;
 	cursor: pointer;
 	font-weight: bold;
-}
 
+	z-index: 2;
+}
 .readMore::after{
 	content: "";
 	height: 1px;
@@ -227,5 +264,52 @@ menu div{
 	left: 0;
 	right: 0;
 	bottom: 0;
+
+	transition: all 100ms;
+}
+.readMore:hover::after{
+	height: 3px;
 }
 
+
+.randomText{
+	height: 20rem;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url("./images/image1.jpg");
+	background-position: center;
+	background-size: cover;
+	display: grid;
+	place-items: center;
+}
+
+.random{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	position: relative;
+	height: max-content;
+	width: 16rem;
+	margin-left: 1rem;
+
+}
+.random::after{
+	box-sizing: content-box;
+	position: absolute;
+	content: "";
+	height: 50%;
+	width: 50%;
+	background-color: transparent;
+	border: 10px solid var(--subColor);
+	border-right: none;
+	border-top: none;
+	bottom: -20px;
+	left: -20px;
+}
+.random > p{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	line-height: 30px;
+}
+
+.random>p:nth-of-type(2){
+	margin-bottom: 0;
+}
