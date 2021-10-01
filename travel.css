@@ -1,0 +1,231 @@
+/* 
+	div.mountainImage
+		header
+			h3
+			menu
+				div*3.menuItems
+
+	div.info
+		div.infoCover
+		div.infoInside
+			p
+			h2
+			p
+			div.learnMore
+
+*/
+
+
+
+*, ::after, ::before{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+:root{
+	--subColor: rgb(199, 155, 12);
+	font-size: 20px;
+}
+
+body{
+	color: white;
+	background-color: black;
+	height: max-content;
+	min-width: 18rem;
+}
+
+.mountainImage{
+	height: 100vh;
+	min-height: 35rem;
+
+	background-image: linear-gradient(rgba(0 , 0, 0, 0.4), rgba(0 , 0, 0, 0.1)), url("./images/image9.jpg");
+	background-position: center;
+	background-size: cover;
+}
+
+
+/* top header */
+.mountainImage header{
+	position: relative;
+	height: 5rem;
+	display: flex;	
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+.mountainImage header::after{
+	content: "";
+	position: absolute;
+
+	height: 2px;
+	background-color: white;
+
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+header h3{
+	position: relative;
+	background-color: var(--subColor);
+	padding: 2px;
+}
+header h3::after{
+	background-color: var(--subColor);
+	content: "";
+	position: absolute;	
+	height: 37px;
+	width: 4px;
+
+	right: -10px;
+	top: 0;
+}
+.mountainImage header menu{
+	display: flex;
+	justify-content: space-around;
+	column-gap: 0.5rem;
+
+}
+
+menu div{
+	cursor: pointer;
+}
+
+/* info */
+.info{
+	position: relative;
+	margin-top: 5rem;
+
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	z-index: 2;
+}
+
+.infoCover{
+	box-sizing: content-box;
+	position: relative;
+	left: 1rem;
+	background-color: transparent;
+	width: 10rem;
+	height: 20rem;
+
+	border: 8px solid var(--subColor);
+	border-right: none;
+	z-index: -2;
+}
+
+.infoInside{
+	max-width: 17rem;
+	left: 2rem;
+	position: absolute;
+	user-select: none;
+}
+.infoInside>p{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	line-height: 30px;
+}
+
+.learnMore{
+	display: relative;
+	font-weight: bold;
+	cursor: pointer;
+}
+.learnMore::after{
+	content: "";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+
+	background-color: white;
+	height: 1px;
+	width: 6rem;
+}
+
+
+/* riverImage second half of the page -------------------------------------------------*/
+/* 
+	.riverImage
+		div.photo
+		
+		div.info1
+			div.infocover1
+			div.infoInside1
+				h3
+				p
+				div.readMore
+*/
+.riverImage{
+	height: 45rem;
+	background-image: linear-gradient(rgba(0, 0, 0, 0.9) 1%, rgba(0, 0, 0, 0)), url("./images/image8.jpg");
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+
+	row-gap: 1.5rem;
+}
+
+.riverImage .photo{
+	margin-top: 0.5rem;
+	height: 15rem;
+	width: 14rem;
+	background-image: url("./images/image13.jpg");
+	background-position: center;
+	background-size: cover;
+
+	border-radius: 5px;
+	border: 1px solid white;
+
+}
+
+.riverImage .info1{
+	height: max-content;
+	width: 16rem;
+}
+.infoCover1{
+	padding: 0.2rem;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	border: 10px solid var(--subColor);
+	border-top: none;
+	border-left: none;
+
+	height: max-content;
+	width: 16rem;
+}
+
+.infoInside1{
+	max-height: 30rem;
+	max-width: 20rem;
+}
+.infoInside1 p{
+	margin-top: 1rem;
+	margin-bottom: 1rem;
+	line-height: 30px;
+}
+
+.infoInside1 .readMore{
+	width: max-content;
+	position: relative;
+	cursor: pointer;
+	font-weight: bold;
+}
+
+.readMore::after{
+	content: "";
+	height: 1px;
+	background-color: white;
+	position: absolute;
+
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
