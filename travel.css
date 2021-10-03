@@ -14,174 +14,167 @@
 			div.learnMore
 
 */
-
-
-
-*, ::after, ::before{
-	box-sizing: border-box;
-	margin: 0;
-	padding: 0;
+*, ::after, ::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-:root{
-	--subColor: rgb(199, 155, 12);
-	--subColorOpaque: rgb(199, 155, 12, 0.3); 
-	font-size: 20px;
+:root {
+  --subColor: rgb(199, 155, 12);
+  --subColorOpaque: rgb(199, 155, 12, 0.3);
+  font-size: 20px;
 }
 
-body{
-	color: white;
-	background-color: black;
-	height: max-content;
-	min-width: 18rem;
+body {
+  color: white;
+  background-color: black;
+  height: max-content;
+  min-width: 18rem;
 }
 
-.mountainImage{
-	height: 100vh;
-	min-height: 35rem;
-
-	background-image: linear-gradient(rgba(0 , 0, 0, 0.4), rgba(0 , 0, 0, 0.1)), url("./images/image9.jpg");
-	background-position: center;
-	background-size: cover;
+.mountainImage {
+  height: 100vh;
+  min-height: 35rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1)), url("./images/image9.jpg");
+  background-position: center;
+  background-size: cover;
 }
-
 
 /* top header */
-.mountainImage header{
-	position: relative;
-	height: 5rem;
-	display: flex;	
-	flex-direction: row;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	align-items: center;
-	column-gap: 1rem;
-}
-.mountainImage header::after{
-	content: "";
-	position: absolute;
-	height: 2px;
-	background-color: white;
-
-	left: 0;
-	right: 0;
-	bottom: 0;
-}
-header h3{
-	min-width: 7.4rem;
-	position: relative;
-	background-color: var(--subColor);
-	padding: 2px;
-}
-header h3::after{
-	background-color: var(--subColor);
-	content: "";
-	position: absolute;	
-	height: 37px;
-	width: 4px;
-
-	right: -10px;
-	top: 0;
-}
-.mountainImage header menu{
-	display: flex;
-	justify-content: space-around;
-	column-gap: 0.5rem;
+.mountainImage header {
+  position: relative;
+  height: 5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  column-gap: 1rem;
 }
 
-menu div{
-	position: relative;
-	cursor: pointer;
+.mountainImage header::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  background-color: white;
+  left: 0;
+  right: 0;
+  bottom: 0;
 }
-.menuItems::after{
-	content: "";
-	position: absolute;
 
-	background-color: white;
-	height: 1px;
-	width: 100%;
-
-	left: 0;
-	bottom: 0;
-
-	transition: 100ms;
+header h3 {
+  min-width: 7.4rem;
+  position: relative;
+  background-color: var(--subColor);
+  padding: 2px;
 }
-.menuItems:hover::after{
-	height: 3px;
+
+header h3::after {
+  background-color: var(--subColor);
+  content: "";
+  position: absolute;
+  height: 37px;
+  width: 4px;
+  right: -10px;
+  top: 0;
+}
+
+.mountainImage header menu {
+  display: flex;
+  justify-content: space-around;
+  column-gap: 0.5rem;
+}
+
+menu div {
+  position: relative;
+  cursor: pointer;
+}
+
+.menuItems::after {
+  content: "";
+  position: absolute;
+  background-color: white;
+  height: 1px;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  transition: 100ms;
+}
+
+.menuItems:hover::after {
+  height: 3px;
 }
 
 /* info */
-.info{
-	margin-top: 5rem;
-
-	display: grid;
-	place-items: center;
+.info {
+  margin-top: 35%;
+  display: grid;
+  place-items: center;
 }
 
-
-.infoInside{
-	position: relative;
-	width: 16rem;
-	user-select: none;
-}
-.infoInside::after{
-	box-sizing: content-box;
-	content: "";
-	position: absolute;
-	left: -20px;
-	bottom: -20px;
-
-	background-color: transparent;
-
-	border: 10px solid var(--subColor);
-	border-top: none;
-	border-right: none;
-
-	height: 80%;
-	width: 50%;
-}
-.infoInside>p{
-	padding-top: 12px;
-	padding-bottom: 12px;
-	line-height: 30px;
-}
-.infoInside p:nth-child(1){
-	background-color: var(--subColorOpaque);
-	line-height: 0px;
-	padding-left: 5px;
-	width: 14rem;
-	height: 1.4rem;
+.infoInside {
+  position: relative;
+  width: 16rem;
+  user-select: none;
 }
 
-.learnMore{
-	position: relative;
-	width: max-content;
-	font-weight: bold;
-	cursor: pointer;
-	z-index: 2;
-}
-.learnMore:hover::after{
-	height: 3px;
-}
-.learnMore::after{
-	content: "";
-	position: absolute;
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-	background-color: white;
-	height: 1px;
-
-	transition: all 100ms;
+.infoInside::after {
+  box-sizing: content-box;
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  background-color: transparent;
+  border: 10px solid var(--subColor);
+  border-top: none;
+  border-right: none;
+  height: 80%;
+  width: 50%;
 }
 
+.infoInside > p {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  line-height: 30px;
+}
+
+.infoInside p:nth-child(1) {
+  background-color: var(--subColorOpaque);
+  line-height: 0px;
+  padding-left: 5px;
+  width: 14rem;
+  height: 1.4rem;
+}
+
+.learnMore {
+  position: relative;
+  width: max-content;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.learnMore:hover::after {
+  height: 3px;
+}
+
+.learnMore::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: white;
+  height: 1px;
+  transition: all 100ms;
+}
 
 /* riverImage second half of the page -------------------------------------------------*/
 /* 
 	.riverImage
 		div.photo
-		
+
 		div.info1
 			div.infocover1
 			div.infoInside1
@@ -189,128 +182,125 @@ menu div{
 				p
 				div.readMore
 */
-.riverImage{
-	height: 45rem;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.9) 1%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./images/image8.jpg");
-	background-position: 100% 100%;
-	background-repeat: no-repeat;
-	background-size: cover;
-
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	align-items: center;
-
-	row-gap: 1.5rem;
+.riverImage {
+  height: 45rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9) 1%, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.8)), url("./images/image8.jpg");
+  background-position: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 1.5rem;
 }
 
-.riverImage .photo{
-	margin-top: 0.5rem;
-	height: 15rem;
-	width: 14rem;
-	background-image: url("./images/image13.jpg");
-	background-position: center;
-	background-size: cover;
-
-	border-radius: 5px;
-	border: 1px solid var(--subColor);
-
-}
-.riverImage .info1{
-	height: max-content;
-	width: 16rem;
+.riverImage .photo {
+  margin-top: 0.5rem;
+  height: 15rem;
+  width: 14rem;
+  background-image: url("./images/image13.jpg");
+  background-position: center;
+  background-size: cover;
+  border-radius: 5px;
+  border: 1px solid var(--subColor);
 }
 
-.infoInside1{
-	position: relative;
-	max-height: 30rem;
-	max-width: 20rem;
-}
-.infoInside1::after{
-	box-sizing: content-box;
-	content: "";
-	position: absolute;
-	right: -15px;
-	bottom: -20px;
-
-	background-color: transparent;
-
-	border: 10px solid var(--subColor);
-	border-top: none;
-	border-left: none;
-
-	height: 80%;
-	width: 105%;
-}
-.infoInside1 p{
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	line-height: 30px;
+.riverImage .info1 {
+  height: max-content;
+  width: 16rem;
 }
 
-.infoInside1 .readMore{
-	width: max-content;
-	position: relative;
-	cursor: pointer;
-	font-weight: bold;
-
-	z-index: 2;
-}
-.readMore::after{
-	content: "";
-	height: 1px;
-	background-color: white;
-	position: absolute;
-
-	left: 0;
-	right: 0;
-	bottom: 0;
-
-	transition: all 100ms;
-}
-.readMore:hover::after{
-	height: 3px;
+.infoInside1 {
+  position: relative;
+  max-height: 30rem;
+  max-width: 20rem;
 }
 
-
-.randomText{
-	height: 20rem;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url("./images/image1.jpg");
-	background-position: center;
-	background-size: cover;
-	display: grid;
-	place-items: center;
+.infoInside1::after {
+  box-sizing: content-box;
+  content: "";
+  position: absolute;
+  right: -15px;
+  bottom: -20px;
+  background-color: transparent;
+  border: 10px solid var(--subColor);
+  border-top: none;
+  border-left: none;
+  height: 80%;
+  width: 105%;
 }
 
-.random{
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	position: relative;
-	height: max-content;
-	width: 16rem;
-	margin-left: 1rem;
-
-}
-.random::after{
-	box-sizing: content-box;
-	position: absolute;
-	content: "";
-	height: 50%;
-	width: 50%;
-	background-color: transparent;
-	border: 10px solid var(--subColor);
-	border-right: none;
-	border-top: none;
-	bottom: -20px;
-	left: -20px;
-}
-.random > p{
-	margin-top: 1rem;
-	margin-bottom: 1rem;
-	line-height: 30px;
+.infoInside1 p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 30px;
 }
 
-.random>p:nth-of-type(2){
-	margin-bottom: 0;
+.infoInside1 .readMore {
+  width: max-content;
+  position: relative;
+  cursor: pointer;
+  font-weight: bold;
+  z-index: 2;
 }
+
+.readMore::after {
+  content: "";
+  height: 1px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: all 100ms;
+}
+
+.readMore:hover::after {
+  height: 3px;
+}
+
+.randomText {
+  height: 20rem;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.4)), url("./images/image1.jpg");
+  background-position: center;
+  background-size: cover;
+  display: grid;
+  place-items: center;
+}
+
+.random {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  height: max-content;
+  width: 16rem;
+  margin-left: 1rem;
+}
+
+.random::after {
+  box-sizing: content-box;
+  position: absolute;
+  content: "";
+  height: 50%;
+  width: 50%;
+  background-color: transparent;
+  border: 10px solid var(--subColor);
+  border-right: none;
+  border-top: none;
+  bottom: -20px;
+  left: -20px;
+}
+
+.random > p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  line-height: 30px;
+}
+
+.random > p:nth-of-type(2) {
+  margin-bottom: 0;
+}
+
+/*# sourceMappingURL=travel.css.map */
